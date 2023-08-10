@@ -3,7 +3,7 @@ from obj_sal_seg_branch.ObjSegMaskConfig import ObjSegMaskConfig
 from obj_sal_seg_branch.SOSNet import SOSNet
 from obj_sal_seg_branch.Obj_Sal_Seg_Dataset import Obj_Sal_Seg_Dataset
 
-DATASET_ROOT = "D:/Desktop/ASSR/"   # Change to your location
+DATASET_ROOT = "C:/Work/uni/Summer Placement/SaRa/Attention_Shift_Ranks/ASSR/"   # Change to your location
 
 
 if __name__ == '__main__':
