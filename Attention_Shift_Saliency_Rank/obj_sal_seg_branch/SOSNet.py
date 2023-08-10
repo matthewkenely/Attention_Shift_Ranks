@@ -204,7 +204,7 @@ class SOSNet():
             layer = self.keras_model.get_layer(name)
             if layer.output in self.keras_model.losses:
                 continue
-            loss = (tf.reduce_mean(layer.output, keepdims=True)
+            loss = (tf.reduce_mean(layer.output)
                     * self.config.LOSS_WEIGHTS.get(name, 1.))
             self.keras_model.add_loss(loss)
 
@@ -227,7 +227,7 @@ class SOSNet():
                 continue
             layer = self.keras_model.get_layer(name)
             self.keras_model.metrics_names.append(name)
-            loss = (tf.reduce_mean(layer.output, keepdims=True)
+            loss = (tf.reduce_mean(layer.output)
                     * self.config.LOSS_WEIGHTS.get(name, 1.))
             self.keras_model.metrics_tensors.append(loss)
 
